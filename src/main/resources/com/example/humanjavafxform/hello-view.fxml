@@ -16,5 +16,6 @@
 
     <Label fx:id="welcomeText" />
     <Button fx:id="btnRegister" onAction="#onBtnRegisterClick" text="Register" />
-   <Button fx:id="btnSearch" mnemonicParsing="false" text="Search by ID" />
+   <Button fx:id="btnSearch" onAction="#onBtnSearchClick" mnemonicParsing="false" text="Search by ID" />
+    <Button text="ShowInfo" onAction="#onBtnShowClick" />
 </VBox>

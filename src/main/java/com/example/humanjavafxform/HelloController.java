@@ -33,4 +33,20 @@ public class HelloController {
 
         welcomeText.setText("Insert successful");
     }
+
+    @FXML
+    protected  void onBtnSearchClick() {
+        String id = txtID.getText().trim();
+        String name = sPool.searchStudentNameByID(id);
+        if (!name.isEmpty()) {
+            System.out.println("ชื่อ: " + name);
+        }
+
+
+    }
+
+    @FXML
+    protected void onBtnShowClick() {
+        sPool.displayStudentInfo();
+    }
 }
