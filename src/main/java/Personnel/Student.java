@@ -1,6 +1,32 @@
 package Personnel;
+import Item.Subject;
+
+import java.util.ArrayList;
 
 public class Student extends Person {
+
+
+    ArrayList<Subject> sbj = new ArrayList<Subject>();
+    
+
+    public boolean addSubject(Subject subject){ //ถ้าลงทะเบียนได่ return true ถ้าไม่ได้ false
+
+        int totalUnit = 0;
+        for(Subject s : sbj){
+            totalUnit += s.getUnit();
+        }
+        totalUnit += subject.getUnit();
+        sbj.add(subject);
+        return totalUnit < 21;
+    }
+
+    public int getTotalUnit(){
+        int total = 0;
+        for(Subject s : sbj){
+            total += s.getUnit();
+        }
+        return total;
+    }
 
     private int score;
 
